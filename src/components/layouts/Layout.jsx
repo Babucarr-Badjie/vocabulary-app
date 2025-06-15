@@ -1,3 +1,4 @@
-export default function Layout() {
-  return <div></div>;
+export default function Layout(props) {
+  const { children } = props;
+  return <div>{children}</div>;
 }
