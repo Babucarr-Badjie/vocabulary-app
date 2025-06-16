@@ -1,0 +1,75 @@
+#root {
+  min-height: 100vh;
+  max-width: 700px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+header,
+main,
+footer {
+  width: 100%;
+  max-width: 800px;
+  padding: 1rem;
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+header h1 {
+  width: fit-content;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+/* ====== footer styles (start) ==== */
+footer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+  padding: 2rem 0;
+  padding-bottom: 3rem;
+}
+
+footer a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.3rem;
+  padding-right: 0.5rem;
+  background: var((--background-muted));
+  border-radius: 4rem;
+  border: 1px solid transparent;
+  transition-duration: 200ms;
+  text-decoration: none;
+}
+footer a:hover {
+  border-color: var(--color-link);
+}
+
+footer a img {
+  max-width: 30px;
+  aspect-ratio: 1/1;
+  border-radius: 100%;
+}
+
+/* ====== footer styles (end) ==== */
+
+/* ====== Media Query ========= */
+@media (min-width: 640px) {
+  body {
+    gap: 2rem;
+    padding: 2rem 0;
+  }
+}
