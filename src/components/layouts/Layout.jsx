@@ -1,14 +1,20 @@
+import { useState } from "react";
+import Welcome from "./Welcome";
+import Dashboard from "./Dashboard";
+
 export default function Layout(props) {
   const { children } = props;
+
+  const [showPage, setShowPage] = useState("welcome");
 
   const header = (
     <header className="header">
       <h1 className="text-gradient">WordJourney</h1>
       <p>
         <i>
-          "Embark on your journey to master new words every day. WordJourney
+          Embark on your journey to master new words every day. WordJourney
           helps you learn, track, and retain vocabulary through engaging and
-          personalized learning tools."
+          personalized learning tools.
         </i>
       </p>
     </header>
@@ -30,7 +36,12 @@ export default function Layout(props) {
   return (
     <>
       {header}
-      <main>{children}</main>
+      <main>
+        {showPage === "welcome" && (
+          <Welcome onStart={() => setShowPage("dashboard")} />
+        )}
+        {showPage === "dashboard" && <Dashboard />}
+      </main>
       {footer}
     </>
   );
