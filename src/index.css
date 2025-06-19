@@ -80,6 +80,58 @@ section {
 }
 /* ==== Welcome page (end) ===== */
 
+/* ==== Dashboard page (start) ==== */
+.stats-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.welcome-text {
+  display: flex;
+  align-items: end;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+}
+
+.stats-column {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.level {
+  min-height: 40px;
+  display: flex;
+  align-items: stretch;
+  gap: 1px;
+  border-radius: var(--border-radius-small);
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.level > div:first-of-type {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  z-index: 3;
+}
+
+.level-bar {
+  flex: 1;
+  background: var(--color-link-transparent);
+}
+.xp-bar {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;  
+  background: var(--color-link);
+}
+/* ==== Dashboard page (end) ==== */
+
 /* ====== footer styles (start) ==== */
 footer {
   display: flex;

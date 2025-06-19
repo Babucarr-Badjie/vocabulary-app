@@ -1,11 +1,5 @@
-import { useState } from "react";
-import Welcome from "./Welcome";
-import Dashboard from "./Dashboard";
-
 export default function Layout(props) {
   const { children } = props;
-
-  const [showPage, setShowPage] = useState("welcome");
 
   const header = (
     <header className="header">
@@ -36,12 +30,7 @@ export default function Layout(props) {
   return (
     <>
       {header}
-      <main>
-        {showPage === "welcome" && (
-          <Welcome onStart={() => setShowPage("dashboard")} />
-        )}
-        {showPage === "dashboard" && <Dashboard />}
-      </main>
+      <main>{children}</main>
       {footer}
     </>
   );
