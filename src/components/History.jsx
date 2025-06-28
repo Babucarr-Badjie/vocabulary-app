@@ -13,7 +13,7 @@ export default function History() {
           </div>
           <div>
             <p>Streak</p>
-            <h6>53</h6>
+            <h6>55</h6>
           </div>
         </div>
       </div>
